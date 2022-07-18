@@ -1,0 +1,14 @@
+#include<iostream>
+using namespace std;
+void printTable(int start, int end, int step) {
+    int s,e,w;
+    cin>>s>>e>>w;
+   
+    
+    while(start<=end){
+
+        int p =(5.0/9)*(start-32);
+        cout<<start<<"\t"<<p<<endl;
+        start = start+step;
+    }  
+}

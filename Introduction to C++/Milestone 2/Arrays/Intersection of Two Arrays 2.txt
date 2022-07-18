@@ -1,0 +1,17 @@
+void intersection(int *input1, int *input2, int size1, int size2)
+{   int i=0,j,x,k=0;  
+ while(i<size1){
+      x=input1[i];
+     j=0;
+     while(j<size2){
+         if(input1[i]==input2[j]){
+             cout<<input1[i]<<" ";
+             input2[j]=-1000000000;
+             
+         break;}
+             j+=1;
+         }
+         i+=1;
+     }
+    
+}

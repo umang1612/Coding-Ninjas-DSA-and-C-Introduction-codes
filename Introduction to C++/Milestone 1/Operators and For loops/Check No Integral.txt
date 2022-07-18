@@ -1,0 +1,33 @@
+#include<iostream>
+using namespace std;
+int main(){
+int n,x,j=0;
+cin>>n;
+int arr[n];
+for(int i=0;i<n;i+=1){
+    cin>>x;
+    arr[i]=x;
+}
+while(arr[j]>arr[j+1]){
+    j+=1;
+}
+if(j==n-1){
+    cout<<"true";
+}
+else{
+    while(arr[j]<arr[j+1]&& j<n-1){
+        j+=1;
+
+
+    }
+
+    if(j==n-1){
+        cout<<"true";
+    }
+    else{
+        cout<<"false";
+    }
+}
+
+    return 0;
+}

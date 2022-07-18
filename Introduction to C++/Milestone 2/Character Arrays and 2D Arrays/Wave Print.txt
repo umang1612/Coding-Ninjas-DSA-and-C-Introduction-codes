@@ -1,0 +1,20 @@
+void wavePrint(int **input, int nRows, int mCols)
+{int i=0,j,k;
+    while (i<mCols){
+        if(i%2==0){
+        j=0;
+        while(j<nRows){
+            cout<<input[j][i]<<" ";
+            j+=1;
+        }
+        }
+        else{
+        k=nRows-1;
+        while(k>=0){
+            cout<<input[k][i]<<" ";
+            k-=1;
+        }  
+    }
+        i+=1;
+    }
+}

@@ -1,0 +1,22 @@
+int findUnique(int *arr, int size)
+{
+    int i=0,j=1;
+    while(i<size){
+        int x=arr[i];
+        j=0;
+        while(j<=size){
+            
+            if(x==arr[j]&& i!=j){
+                 break;}
+            j+=1;
+            if(j==size+1){
+                return x;
+                
+            }    
+            }
+            i+=1;
+            
+        }
+}
+        
+    

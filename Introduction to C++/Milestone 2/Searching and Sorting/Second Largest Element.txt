@@ -1,0 +1,19 @@
+int findSecondLargest(int *input, int n)
+{
+    int i=0,j=0;
+    if(n<=1){
+        return  -2147483648;
+    }
+    int maxi= -2147483648;
+    int second_max=-2147483648;
+    for(int i=0;i<n;i++){
+        if(input[i]>maxi){   
+            second_max=maxi;
+            maxi=input[i];
+        }
+        else if(input[i]!=maxi && input[i]>second_max){
+            second_max=input[i];
+        }
+    }
+    return second_max;
+}

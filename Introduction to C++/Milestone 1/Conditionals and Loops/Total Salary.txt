@@ -1,0 +1,30 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+int main(){
+    double basicsalary;
+    char grade;
+    cin>>basicsalary>>grade;
+   double hra   = 0.20*basicsalary;
+    double da    = 0.50*basicsalary;
+    double pf    = 0.11*basicsalary;
+    int allow;
+if (grade =='A'){
+    allow=1700;
+    
+}
+else if(grade =='B'){
+    allow=1500;
+}
+else {
+    allow=1300;
+}
+    double totalsalary= basicsalary + hra + da + allow-pf;
+    int p=round(totalsalary);
+cout<<p;
+
+
+
+
+    return 0;
+}

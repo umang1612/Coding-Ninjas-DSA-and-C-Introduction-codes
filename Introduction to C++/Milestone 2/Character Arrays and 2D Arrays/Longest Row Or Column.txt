@@ -1,0 +1,49 @@
+void findLargest(int **input, int nRows, int mCols)
+{int intimaxcolsum=0,intimaxrowsum=0,maxrowsum,maxcolsum,ithrowsum=0,ithcolsum=0,rowindex=0,colindex=0;
+    if(nRows==0||mCols==0){
+        cout<<"row 0 -2147483648"<<endl;
+    }
+ else{
+    
+    for(int i=0;i<nRows;i++){
+    for(int j=0;j<mCols;j++){
+        ithrowsum+=input[i][j];
+        
+    }
+        maxrowsum=ithrowsum;
+        if(maxrowsum<=intimaxrowsum){
+            maxrowsum=intimaxrowsum; 
+        }
+        else{
+            intimaxrowsum=maxrowsum;
+            rowindex=i;
+        }
+        ithrowsum=0;
+}
+ 
+  for(int i=0;i<mCols;i++){
+    for(int j=0;j<nRows;j++){
+        ithcolsum+=input[j][i];
+        
+    }
+        maxcolsum=ithcolsum;
+        if(maxcolsum<=intimaxcolsum){
+            maxcolsum=intimaxcolsum;  
+        }
+       else{
+            intimaxcolsum=maxcolsum;
+           colindex=i;
+        }
+        ithcolsum=0;
+}
+ if(maxrowsum>=maxcolsum){
+     cout<<"row"<<" "<<rowindex<<" "<<maxrowsum;
+ }
+ else{
+     cout<<"column"<<" "<<colindex<<" "<<maxcolsum;
+ }
+ 
+ }
+ 
+    
+}

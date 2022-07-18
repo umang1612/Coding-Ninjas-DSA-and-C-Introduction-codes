@@ -1,0 +1,18 @@
+#include<iostream>
+using namespace std;
+int main(){
+   long long n;
+    cin>>n;
+    long long p=n,r;
+    long long t=1;
+     long long bin=0;
+    while(p>0){
+        r=p%2;
+        p/=2;
+        bin+=r*t;
+        t*=10;
+        
+    }
+    cout<<bin;
+    return 0;
+}

@@ -1,0 +1,23 @@
+#includeiostream
+using namespace std;
+int main(){
+    int n;
+    cinn;
+    int i=1;
+    int c=1;
+    int m;
+    while(c=n){
+        m=3i+2;
+        if(m%4!=0){
+            c+=1;
+            coutm ;
+        }
+        i+=1;
+    
+    }
+
+
+
+
+    return 0;
+}

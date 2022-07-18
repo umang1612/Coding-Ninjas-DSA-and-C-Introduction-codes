@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    int c;
+    cout<<2<<endl;
+    int i=3;
+    while (i<=n){
+        int j=2;
+        while(j<i){
+            c=i%j;
+            if(c==0){
+                break;}
+            j+=1;
+            
+        }
+        if(c!=0){
+       cout<<i<<endl;}    
+        i+=1;
+        }
+        return 0;
+
+}

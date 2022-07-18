@@ -1,0 +1,21 @@
+char highestOccurringChar(char input[]) {
+    int freq[256]={0};
+    int index;
+    for(int i=0;input[i]!='\0';i+=1){
+        index=input[i];
+        freq[index]+=1;
+            
+    }
+    index=1;
+    int maxindex=0;
+    while(index<256){
+        if(freq[index]>freq[maxindex]){
+            maxindex=index;
+        }
+    index+=1;
+    }
+        
+    char max;
+    max=maxindex;
+    return max;
+}

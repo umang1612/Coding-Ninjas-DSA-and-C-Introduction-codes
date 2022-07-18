@@ -1,0 +1,35 @@
+void sumOfTwoArrays(int *input1, int size1, int *input2, int size2, int *output)
+{int p=size1-1,q=size2-1,c,g=0;
+ if(size1>=size2){c=p+1;}
+ else{c=q+1;}
+ while(p>=0||q>=0){
+     if(q<0){
+         q=0;
+         input2[q]=0;
+         
+     }
+     if(p<0){
+         p=0;
+         input1[p+1]=0;
+     }
+    output[c]=((input1[p]+input2[q]+g)%10);
+      if(input1[p]+input2[q]+g>=10){
+         g=1;}
+      else{
+          g=0;
+      } 
+     p-=1;
+     q-=1;
+     c-=1;
+     
+ }
+ 
+ 
+ if(g==1){
+     output[0]=1;
+ }
+ else{
+     output[0]=0;
+ }
+ 
+}

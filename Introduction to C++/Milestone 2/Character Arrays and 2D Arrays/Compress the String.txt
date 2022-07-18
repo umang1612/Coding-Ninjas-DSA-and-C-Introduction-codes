@@ -1,0 +1,25 @@
+string getCompressedString(string &input) {
+    int freq[1000001]={0};
+    int n =input.size();
+    int index,index1,k=0;
+    string input1;
+    char c;
+    for(int i=0;i<n;i++){
+        c=input[i];
+        while(c==input[i+1]){
+            index=c;
+            freq[index]+=1;
+            i+=1;
+        }
+            index=c;
+            
+                input1+=c;
+        if(freq[index]>=1){
+                int w=freq[index]+1;
+                input1+=to_string(w);
+            }
+            freq[index]=0;
+        }
+    return input1;
+    
+}

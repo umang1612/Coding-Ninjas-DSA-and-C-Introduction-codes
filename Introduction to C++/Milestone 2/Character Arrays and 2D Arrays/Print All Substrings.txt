@@ -1,0 +1,17 @@
+void printSubstrings(char input[]) {
+    int i=0,j=0,k=0;
+    while(input[i]!='\0'){
+        while(k<strlen(input)){
+            j=i;
+            while(j<=k){
+            cout<<input[j];
+                j+=1;
+        }
+            k+=1;
+           cout<<endl;}
+    
+        i+=1;
+        k=i;
+}
+}
+           

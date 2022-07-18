@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+if(n==0||n==1){
+    cout<< -2147483648;} 
+else{
+    int maxi = -2147483648;
+    int second_maxi=-2147483648;
+    int i=0;
+    for(int i=0;i<n;i++){
+        int x;
+        cin>>x;
+        if(x>maxi){
+            second_maxi=maxi;
+            maxi=x; 
+        }
+        else if(x>second_maxi && x!=maxi){
+                second_maxi=x;
+            }
+            
+        }  
+    cout<< second_maxi;
+    return 0;
+}
+}

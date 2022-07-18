@@ -1,0 +1,31 @@
+void spiralPrint(int **input, int nRows, int nCols)
+{int i=0,j=0,k,p;
+ if(nCols>nRows){
+     p=nRows/2+1;
+ }
+ else{
+     p=nCols/2+1;
+ }
+ while(i<p){
+     j=i;
+     while(j<nCols-i){
+     cout<<input[i][j]<<" ";
+         j+=1;}
+     k=i+1;
+     while(k<nRows-i){
+         cout<<input[k][j-1]<<" ";
+         k+=1;
+     }
+     while(j>i+1){
+         cout<<input[k-1][j-2]<<" ";
+         j-=1;
+     }
+     while(k>i+2){
+         cout<<input[k-2][j-1]<<" ";
+             k-=1;
+     }
+     i+=1;
+ }
+}
+     
+     
